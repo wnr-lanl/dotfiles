@@ -1,0 +1,16 @@
+[user]
+name = Samuel K. Gutierrez
+email = samuel@lanl.gov
+
+[color]
+branch = auto
+diff = auto
+status = auto
+
+[alias]
+co = checkout
+st = status
+ci = commit
+
+[core]
+editor = vim

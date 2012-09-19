@@ -1,0 +1,9 @@
+[ui]
+username = Samuel K. Gutierrez
+editor = vim
+# update this to push to a remote repo via ssh
+#remotecmd = /usr/projects/hpctools/samuel/plats/tu/local/hg/mercurial-2.2.3/hg
+
+[extensions]
+color =
+fetch =
