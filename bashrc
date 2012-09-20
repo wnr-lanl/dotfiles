@@ -25,7 +25,7 @@ shopt -s checkwinsize
 # if we have a local installation of dotkit, then use it
 if [[ -d $HOME/local/dotkit ]]; then
     eval `$HOME/local/dotkit/init`
-    use -q dotkit
+    use -q dotkit 2>&1 > /dev/null
 fi
 
 ################################################################################
