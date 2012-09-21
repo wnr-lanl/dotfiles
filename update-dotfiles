@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# 
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+# 
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+# 
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+# This code inspired by Todd Werth's dotfile link program
+
+# author: Samuel K. Gutierrez
+
+declare -r app_name="update-dotfile"
+
+################################################################################
+# thin wrapper around ln -s
+################################################################################
+function update_link()
+{
+    local file="$1"
+    local link="$2"
+
+    echo "#+>updating links..."
+
+    if [[ -z "$file" || -z "$link" ]]; then
+        echo "update_link: bad parameter -- cannot continue."
+        return 1
+    fi
+    if [[ ! -e "$file" ]]; then
+        echo "update_link: cannot update link -- $file does not exist."
+        return 1
+    fi
+    if [[ -e "$link" ]]; then
+        echo "#++> removing $link"
+        rm -f "$link"
+        if [[ 0 != $? ]]; then
+            echo "update_link: rm -f $link failed -- cannot continue."
+            return 1
+        fi
+    fi
+    echo "#+++> creating symbolic link: $file -> $link"
+    ln -s "$file" "$link"
+}
+
+if [ -z "$PS1" ]; then
+cat << EOF
+    "please source $app_name, don't run it.
+     EXAMPLE:
+        source ./$app_name"
+EOF
+else
+    update_link "$PWD/dotfiles/bashrc" ~/.bashrc
+
+#source ~/.bashrc
+fi
+
+
