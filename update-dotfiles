@@ -19,7 +19,73 @@
 
 # author: Samuel K. Gutierrez
 
-declare -r app_name="update-dotfile"
+APP_NAME="update-dotfile"
+BVERBOSE=1
+
+################################################################################
+# pre-action sanity
+################################################################################
+function sanity()
+{
+    local dist_dir="$1"
+
+    if [[ -z "$dist_dir" ]]; then
+        echo "sanity: bad parameter -- cannot continue."
+        return 1
+    fi
+    if [ -z "$PS1" ]; then
+        echo "please source $APP_NAME, don't run it."
+        echo "EXAMPLE:"
+        echo "  source ./$APP_NAME"
+        return 1
+    fi
+    if [[ ! -e "$dist_dir/.magic-cookie" ]]; then
+        echo "sanity: invalid distribution path detected -- cannot continue."
+        return 1
+    fi
+    return 0
+}
+
+################################################################################
+# returns the directory of the dotfile distribution
+#   i.e., the path to this script and dotfiles
+################################################################################
+function get_dotfile_dir()
+{
+    local dist_path="${BASH_SOURCE[0]}"
+
+    if [[ -h "${dist_path}" ]]; then
+        while [[ -h "${dist_path}" ]]; do
+            dist_path=`readlink "${dist_path}"`
+        done
+    fi
+    pushd . > /dev/null
+    cd `dirname ${dist_path}` > /dev/null
+    dist_path="$PWD"
+    popd  > /dev/null
+
+    echo "$dist_path"
+}
+
+################################################################################
+#  
+################################################################################
+function build_dotfile_list()
+{
+    return 1
+}
+
+################################################################################
+# echoes input if verbose mode is enabled
+################################################################################
+function status_update()
+{
+    local outstr="$1"
+
+    if [[ 1 == $BVERBOSE ]]; then
+        echo "$outstr"
+    fi
+}
 
 ################################################################################
 # thin wrapper around ln -s
@@ -29,7 +95,7 @@ function update_link()
     local file="$1"
     local link="$2"
 
-    echo "#+>updating links..."
+    status_update "#+> updating links..."
 
     if [[ -z "$file" || -z "$link" ]]; then
         echo "update_link: bad parameter -- cannot continue."
@@ -40,27 +106,31 @@ function update_link()
         return 1
     fi
     if [[ -e "$link" ]]; then
-        echo "#++> removing $link"
+        status_update "#++> removing $link"
         rm -f "$link"
         if [[ 0 != $? ]]; then
             echo "update_link: rm -f $link failed -- cannot continue."
             return 1
         fi
     fi
-    echo "#+++> creating symbolic link: $file -> $link"
+    status_update "#+++> creating symbolic link: $file -> $link"
     ln -s "$file" "$link"
 }
 
-if [ -z "$PS1" ]; then
-cat << EOF
-    "please source $app_name, don't run it.
-     EXAMPLE:
-        source ./$app_name"
-EOF
-else
-    update_link "$PWD/dotfiles/bashrc" ~/.bashrc
+################################################################################
+################################################################################
+# main
+################################################################################
+################################################################################
+function main()
+{
+    local dist_path=$(get_dotfile_dir)
 
-#source ~/.bashrc
-fi
+    sanity "$dist_path"
+    if [[ 0 == $? ]]; then
+        update_link "$dist_path/dotfiles/bashrc" ~/.bashrc
+        #source ~/.bashrc
+    fi
+}
 
-
+main
