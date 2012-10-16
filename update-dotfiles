@@ -131,10 +131,10 @@ function main()
 
     sanity "$dist_path"
     if [[ 0 == $? ]]; then
-        build_dotfile_list "$dist_path"
-        return
-        update_link "$dist_path/dotfiles/bashrc" ~/.bashrc
-        #source ~/.bashrc
+        dot_files=`build_dotfile_list "$dist_path"`
+        for dot_file in `echo "$dot_files"`; do
+            update_link "$dist_path/dotfiles/$dot_file" ~/."$dot_file"
+        done
     fi
 }
 
