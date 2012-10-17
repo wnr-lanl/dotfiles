@@ -20,7 +20,11 @@
 # author: Samuel K. Gutierrez
 
 APP_NAME="update-dotfile"
-BVERBOSE=1
+BVERBOSE=0
+
+# FIXME add optarg to change this
+dot_update_action="copy"
+#dot_update_action="link"
 
 ################################################################################
 # environment sanity checks
@@ -90,33 +94,43 @@ function status_update()
 }
 
 ################################################################################
-# thin wrapper around ln -s
+# thin wrapper around ln -s or cp -r
 ################################################################################
-function update_link()
+function update_dot()
 {
-    local file="$1"
-    local link="$2"
+    local src="$1"
+    local dest="$2"
 
     status_update "#+> updating links..."
 
-    if [[ -z "$file" || -z "$link" ]]; then
-        echo "update_link: bad parameter -- cannot continue."
+    if [[ -z "$src" || -z "$dest" ]]; then
+        "update_dot: bad parameter -- cannot continue."
         return 1
     fi
-    if [[ ! -e "$file" ]]; then
-        echo "update_link: cannot update link -- $file does not exist."
+    if [[ ! -e "$src" ]]; then
+        echo "update_dot: cannot update link -- $src does not exist."
         return 1
     fi
-    if [[ -e "$link" ]]; then
-        status_update "#++> removing $link"
-        rm -f "$link"
+    if [[ -e "$dest" ]]; then
+        status_update "#++> removing $dest"
+        rm -rf "$dest"
         if [[ 0 != $? ]]; then
-            echo "update_link: rm -f $link failed -- cannot continue."
+            echo "update_dot: rm -rf $dest failed -- cannot continue."
             return 1
         fi
     fi
-    status_update "#+++> creating symbolic link: $file -> $link"
-    ln -s "$file" "$link"
+    if [[ "$dot_update_action" == "link" ]]; then
+        status_update "#+++> creating symbolic link: $src -> $dest"
+        ln -s "$src" "$dest"
+        return $?
+    elif [[ "$dot_update_action" == "copy" ]]; then
+        status_update "#+++> copying: $src -> $dest"
+        cp -r "$src" "$dest"
+        return $?
+    else
+        echo "update_dot: invalid update action -- cannot continue."
+        return 1
+    fi
 }
 
 ################################################################################
@@ -127,15 +141,20 @@ function update_link()
 function main()
 {
     local dist_path=$(get_dotfile_dir)
-    local dot_
 
     sanity "$dist_path"
     if [[ 0 == $? ]]; then
         dot_files=`build_dotfile_list "$dist_path"`
         for dot_file in `echo "$dot_files"`; do
-            update_link "$dist_path/dotfiles/$dot_file" ~/."$dot_file"
+            update_dot "$dist_path/dotfiles/$dot_file" ~/."$dot_file"
+            if [[ 0 != $? ]]; then
+                echo "update_dot failure!"
+                return 1
+            fi
         done
     fi
+    return 0
 }
 
 main
+return $?
