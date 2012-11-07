@@ -75,7 +75,12 @@ alias coplfs='svn co https://plfs.svn.sourceforge.net/svnroot/plfs/trunk '
 alias coloba='cvs -d:ext:samuel@sf4.lanl.gov:/cvsroot/loba co loba'
 alias coompi='svn co https://svn.open-mpi.org/svn/ompi/trunk '
 
-alias ls='ls --color=auto'
+# TODO fix all the os specific code
+if [[ `uname -s` == "Darwin" ]]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'

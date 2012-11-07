@@ -15,8 +15,9 @@ set t_Co=256
 "colorscheme sunburst
 
 """ solarized
-let g:solarized_termcolors=256
 colorscheme solarized
+set background=dark
+let g:solarized_termcolors=256
 
 set showcmd
 syntax on
