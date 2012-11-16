@@ -11,7 +11,7 @@ set t_Co=256
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"colorscheme ir_black 
+"colorscheme ir_black
 "colorscheme sunburst
 
 """ solarized
@@ -68,3 +68,10 @@ endif
 " change the popup menu color
 hi Pmenu ctermfg=green ctermbg=darkgrey guifg=lightgrey guibg=brown
 hi PmenuSel ctermfg=red ctermbg=darkgrey guifg=white guibg=grey40
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cscope stuff
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" update cscope db:
+" o :!cscope -Rb
+" o cs reset
