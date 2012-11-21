@@ -135,4 +135,5 @@ alias ornl_home='ssh samuel@home.ccs.ornl.gov'
 # PATH
 ################################################################################
 export PATH=\
+$HOME/local/autotools/bin:\
 $PATH
