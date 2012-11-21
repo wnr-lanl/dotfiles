@@ -137,4 +137,5 @@ alias ornl_home='ssh samuel@home.ccs.ornl.gov'
 export PATH=\
 $HOME/local/autotools/bin:\
 $HOME/local/cscope/bin:\
+$HOME/local/ctags/bin:\
 $PATH
