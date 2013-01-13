@@ -139,4 +139,5 @@ $HOME/local/autotools/bin:\
 $HOME/local/cscope/bin:\
 $HOME/local/ctags/bin:\
 $HOME/local/valgrind/bin:\
+$HOME/local/gnuplot/bin:\
 $PATH
