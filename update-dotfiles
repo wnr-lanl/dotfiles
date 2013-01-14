@@ -23,8 +23,8 @@ APP_NAME="update-dotfile"
 BVERBOSE=0
 
 # FIXME add optarg to change this
-#dot_update_action="copy"
-dot_update_action="link"
+dot_update_action="copy"
+#dot_update_action="link"
 
 ################################################################################
 # environment sanity checks
