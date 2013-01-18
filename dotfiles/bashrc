@@ -130,7 +130,7 @@ alias llnl-hype='ssh -p 922 samuel@hype.llnl.gov'
 # ornl
 ########################################
 # to get to jaguarpf and chester (xe-6)
-alias ornl_home='ssh samuel@home.ccs.ornl.gov'
+alias ornl-home='ssh samuel@home.ccs.ornl.gov'
 
 ################################################################################
 # PATH
