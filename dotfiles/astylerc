@@ -12,7 +12,7 @@
 --convert-tabs
 
 # pad empty lines around header blocks (e.g. 'if', 'for', 'while')
---break-blocks
+--break-blocks=all
 
 #Insert space padding after paren headers only (e.g. 'if', 'for', 'while'...).
 --pad-header
@@ -25,3 +25,21 @@
 
 # for one liners
 --add-brackets
+
+#--align-reference=name
+-k3
+
+# don't do stuff like malloc (), do malloc()
+--unpad-paren
+
+# do i + j not i+j
+--pad-oper
+
+#--max-instatement-indent for line continuations
+# like foo(bar,
+#          buzz);
+-M80
+
+--min-conditional-indent=0
+
+--indent-col1-comments
