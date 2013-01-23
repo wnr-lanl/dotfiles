@@ -1,0 +1,30 @@
+# artistic style rc
+
+# start with this style
+--style=kr
+
+# do char *foo
+--align-pointer=type
+
+# do char &foo
+--align-reference=name
+
+# use 4 spaces for indent
+--indent=spaces=4
+# convert tabs to spaces
+--convert-tabs
+
+# pad empty lines around header blocks (e.g. 'if', 'for', 'while')
+--break-blocks
+
+Insert space padding after paren headers only (e.g. 'if', 'for', 'while'...).
+--pad-header
+
+# if () {
+# }
+# else {
+# }
+--break-closing-brackets
+
+# for one liners
+--add-brackets
