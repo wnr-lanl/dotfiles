@@ -11,9 +11,6 @@
 # convert tabs to spaces
 --convert-tabs
 
-# pad empty lines around header blocks (e.g. 'if', 'for', 'while')
---break-blocks=all
-
 #Insert space padding after paren headers only (e.g. 'if', 'for', 'while'...).
 --pad-header
 
