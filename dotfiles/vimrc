@@ -8,6 +8,8 @@
 set nocompatible
 set t_Co=256
 
+execute pathogen#infect()
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -36,10 +38,12 @@ set ls=2
 set hlsearch
 set textwidth=80
 set softtabstop=4
+
 " working directory is always the same as the buffer you are editing
 " this is nice, but it confuses ctags :-(
 "autocmd BufEnter * lcd %:p:h
 "
+execute pathogen#infect()
 " testing
 filetype plugin on
 
