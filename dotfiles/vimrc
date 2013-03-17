@@ -16,9 +16,12 @@ execute pathogen#infect()
 "colorscheme sunburst
 
 """ solarized
-colorscheme solarized
+"colorscheme solarized
 set background=dark
 let g:solarized_termcolors=256
+
+""" sunburst
+colorscheme sunburst
 
 set showcmd
 syntax on
