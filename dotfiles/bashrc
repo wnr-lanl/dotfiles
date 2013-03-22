@@ -43,6 +43,8 @@ export SVN_EDITOR=vim
 # lanl stuff
 ################################################################################
 lanl-proxify() {
+    export all_proxy=http://proxyout.lanl.gov:8080
+    export ALL_PROXY=http://proxyout.lanl.gov:8080
     export http_proxy=http://proxyout.lanl.gov:8080
     export https_proxy=https://proxyout.lanl.gov:8080
     export ftp_proxy=http://proxyout.lanl.gov:8080
