@@ -41,6 +41,10 @@ set hlsearch
 set textwidth=80
 set softtabstop=4
 
+" make file open auto-complete more sane
+set wildmenu
+set wildmode=list:longest
+
 " working directory is always the same as the buffer you are editing
 " this is nice, but it confuses ctags :-(
 "autocmd BufEnter * lcd %:p:h
