@@ -10,6 +10,27 @@ set t_Co=256
 execute pathogen#infect()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" setup vundle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let vundle manage vundle -- required!
+Bundle 'gmarik/vundle'
+
+" my bundles:
+" github repos
+Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Valloric/YouCompleteMe'
+
+filetype plugin indent on
+
+"
+":BundleInstall
+"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme ir_black
