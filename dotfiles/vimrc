@@ -22,7 +22,8 @@ Bundle 'gmarik/vundle'
 " my bundles:
 " github repos
 Bundle 'Lokaltog/vim-powerline'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
