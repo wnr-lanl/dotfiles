@@ -19,7 +19,7 @@ Bundle 'gmarik/vundle'
 
 " my bundles:
 " github repos
-Bundle 'Lokaltog/powerline'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
