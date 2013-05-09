@@ -1,6 +1,7 @@
 [user]
 name = Samuel K. Gutierrez
 email = samuel@lanl.gov
+signingkey = Samuel K. Gutierrez (LANL)
 
 [color]
 branch = auto
