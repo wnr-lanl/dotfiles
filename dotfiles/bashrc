@@ -159,6 +159,7 @@ alias llnl-atlas='ssh -p 922 samuel@atlas.llnl.gov'
 alias llnl-hera='ssh -p 922 samuel@hera.llnl.gov'
 alias llnl-zeus='ssh -p 922 samuel@zeus.llnl.gov'
 alias llnl-hype='ssh -p 922 samuel@hype.llnl.gov'
+alias llnl-oslic='ssh samuel@oslic.llnl.gov'
 
 ########################################
 # ornl
