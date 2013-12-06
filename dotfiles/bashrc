@@ -178,11 +178,10 @@ alias ornl-home='ssh samuel@home.ccs.ornl.gov'
 # PATH
 ################################################################################
 export PATH=\
-$HOME/local/homebrew/bin:\
 $HOME/local/autotools/bin:\
 $HOME/local/cscope/bin:\
 $HOME/local/ctags/bin:\
 $HOME/local/valgrind/bin:\
 $HOME/local/gnuplot/bin:\
+/usr/local/bin:\
 $PATH
-
