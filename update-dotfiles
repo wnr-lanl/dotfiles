@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# 
+#
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
-# 
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-# 
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
@@ -72,7 +72,7 @@ function get_dotfile_dir()
 }
 
 ################################################################################
-#  
+#
 ################################################################################
 function build_dotfile_list()
 {
@@ -134,6 +134,18 @@ function update_dot()
 }
 
 ################################################################################
+function letsdothis()
+{
+    echo "are you sure you want to run me..? i delete & overwrite things..."
+    echo "are you cool with this? [yes | no]"
+    read answer
+    if [[ $answer == "yes" ]]; then
+        return 0
+    fi
+    return 1
+}
+
+################################################################################
 ################################################################################
 # main
 ################################################################################
@@ -141,9 +153,10 @@ function update_dot()
 function main()
 {
     local dist_path=$(get_dotfile_dir)
-
-    sanity "$dist_path"
+    # everything okay?  & make sure the user knows that i can create tears
+    sanity "$dist_path" && letsdothis
     if [[ 0 == $? ]]; then
+        # if we are here, let the madness begin
         dot_files=`build_dotfile_list "$dist_path"`
         for dot_file in `echo "$dot_files"`; do
             update_dot "$dist_path/dotfiles/$dot_file" ~/."$dot_file"
