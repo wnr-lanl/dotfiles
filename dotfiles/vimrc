@@ -88,6 +88,8 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 hi SpellCap cterm=underline
 
+hi Search ctermfg=red cterm=underline
+
 " stop terrible default indentation of '#'s in python
 autocmd BufRead *.py inoremap # X<c-h>#
 
