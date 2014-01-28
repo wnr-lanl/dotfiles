@@ -118,6 +118,7 @@ autocmd BufRead *.py inoremap # X<c-h>#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " setf - set filetype
 " folding - zf unfolding - zfa
+" :set spell - z= for suggestions
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope stuff
