@@ -118,6 +118,8 @@ autocmd BufRead *.py inoremap # X<c-h>#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " setf - set filetype
 " folding - zf unfolding - zfa
+" :%!xxd to switch into hex mode.
+" :%!xxd -r to exit from hex mode.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope stuff
