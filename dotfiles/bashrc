@@ -170,6 +170,11 @@ alias llnl-hype='ssh -p 922 samuel@hype.llnl.gov'
 alias llnl-oslic='ssh samuel@oslic.llnl.gov'
 
 ########################################
+# vm
+########################################
+alias ubuntu-13='ssh -Y samuel@ubuntu-13'
+
+########################################
 # ornl
 ########################################
 # to get to jaguarpf and chester (xe-6)
