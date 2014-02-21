@@ -159,6 +159,7 @@ alias sm-fe1='ssh -Y samuel@sm-cm -t ssh sm-fe1'
 alias cuda='ssh -Y samuel@cuda.lanl.gov'
 alias cub-fe="ssh -Y samuel@ccstargate -t ssh -Y samuel@cub-fe.ccstar"
 alias darwin='ssh -Y samuel@darwin.lanl.gov'
+alias ihpc='ssh -Y samuel@ihpc-gate1.lanl.gov'
 
 ########################################
 # llnl
