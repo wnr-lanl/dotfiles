@@ -20,11 +20,13 @@ Bundle 'gmarik/vundle'
 " my bundles:
 " github repos
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'Valloric/MatchTagAlways.git'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
 
 filetype plugin indent on
 
@@ -49,7 +51,7 @@ set t_Co=256
 """ solarized
 "colorscheme solarized
 set background=dark
-let g:solarized_termcolors=256
+let g:solarized_termcolors = 256
 
 """ sunburst
 colorscheme sunburst
@@ -71,6 +73,11 @@ set ls=2
 set hlsearch
 set textwidth=80
 set softtabstop=4
+
+""" vim-session
+" :SaveSession <name>
+" :OpenSession
+let g:session_autoload = 'no'
 
 " make file open auto-complete more sane
 set wildmenu
