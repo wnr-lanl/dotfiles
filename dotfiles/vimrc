@@ -27,6 +27,7 @@ Bundle 'Valloric/MatchTagAlways.git'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
+Bundle 'Blackrush/vim-gocode'
 
 filetype plugin indent on
 
@@ -46,7 +47,6 @@ let g:ycm_confirm_extra_conf = 0
 set t_Co=256
 
 "colorscheme ir_black
-"colorscheme sunburst
 
 """ solarized
 "colorscheme solarized
