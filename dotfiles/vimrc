@@ -28,6 +28,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'wting/rust.vim'
 
 filetype plugin indent on
 
