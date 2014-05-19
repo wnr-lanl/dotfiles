@@ -82,6 +82,16 @@ function build_dotfile_list()
 }
 
 ################################################################################
+#
+################################################################################
+function build_runme_setup_list()
+{
+    local dist_dir="$1"
+    local list=`ls -1 $dist_dir/runme-setup/`
+    echo "$list"
+}
+
+################################################################################
 # echoes input if verbose mode is enabled
 ################################################################################
 function status_update()
@@ -166,6 +176,14 @@ function main()
             fi
         done
     fi
+    runme_setup_files=`build_runme_setup_list "$dist_path"`
+    for runme_setup_file in `echo "$runme_setup_files"`; do
+         /bin/bash "$dist_path/runme-setup/$runme_setup_file"
+         if [[ 0 != $? ]]; then
+             echo "runme_setup_files failure!"
+             return 1
+         fi
+    done
     return 0
 }
 
