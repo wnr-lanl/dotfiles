@@ -11,7 +11,6 @@ git config --global color.status auto
 git config --global alias.co checkout
 git config --global alias.st status
 git config --global alias.ci commit
-git config --global alias.snapshot "!git stash save 'snapshot: \$(date)' && git stash apply "stash@{0}""
 # core
 git config --global core.editor vim
 # push
