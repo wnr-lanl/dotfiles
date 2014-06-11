@@ -86,6 +86,7 @@ set softtabstop=4
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " haskell things
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <C-Space> to get suggestions 
 setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
