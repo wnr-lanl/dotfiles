@@ -28,6 +28,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'wting/rust.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'eagletmt/ghcmod-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -79,6 +81,10 @@ set ls=2
 set hlsearch
 set textwidth=80
 set softtabstop=4
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" haskell things
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """ vim-session
 " :SaveSession <name>
