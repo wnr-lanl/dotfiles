@@ -67,6 +67,7 @@ lanl-proxify() {
 
 lanl-unproxify() {
     unset all_proxy
+    unset ALL_PROXY
     unset http_proxy
     unset https_proxy
     unset ftp_proxy
