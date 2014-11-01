@@ -26,11 +26,12 @@ Plugin 'Valloric/MatchTagAlways.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
-Plugin 'Blackrush/vim-gocode'
-Plugin 'wting/rust.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
+Plugin 'kien/ctrlp.vim'
+"Plugin 'Blackrush/vim-gocode'
+"Plugin 'wting/rust.vim'
+"Plugin 'Shougo/vimproc.vim'
+"Plugin 'eagletmt/ghcmod-vim'
+"Plugin 'eagletmt/neco-ghc'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,6 +50,13 @@ let g:ycm_confirm_extra_conf = 0
 " VIM-Session
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :let g:session_autosave = 'no'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrlp
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors
@@ -86,7 +94,7 @@ set softtabstop=4
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " haskell things
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" <C-Space> to get suggestions 
+" <C-Space> to get suggestions
 setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
