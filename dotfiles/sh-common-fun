@@ -1,0 +1,56 @@
+################################################################################
+# lanl stuff
+################################################################################
+lanl-proxify() {
+    export all_proxy=http://proxyout.lanl.gov:8080
+    export ALL_PROXY=http://proxyout.lanl.gov:8080
+    export http_proxy=http://proxyout.lanl.gov:8080
+    export https_proxy=https://proxyout.lanl.gov:8080
+    export ftp_proxy=http://proxyout.lanl.gov:8080
+    export no_proxy=lanl.gov
+    export NO_PROXY=lanl.gov
+    export HTTP_PROXY=http://proxyout.lanl.gov:8080
+    export HTTPS_PROXY=https://proxyout.lanl.gov:8080
+    export FTP_PROXY=http://proxyout.lanl.gov:8080
+}
+
+lanl-unproxify() {
+    unset all_proxy
+    unset ALL_PROXY
+    unset http_proxy
+    unset https_proxy
+    unset ftp_proxy
+    unset no_proxy
+    unset NO_PROXY
+    unset HTTP_PROXY
+    unset HTTPS_PROXY
+    unset FTP_PROXY
+}
+
+################################################################################
+# convenience functions
+################################################################################
+# sets PATH and LD_LIBRARY_PATH for a specified dir
+loadapp()
+{
+    if [[ $# == 1 ]]; then
+        basedir="$1"
+        if [[ ! -d "$basedir" || ! -d "$basedir/bin" || ! -d "$basedir/lib" ]];
+        then
+            echo "cannot use: $basedir"
+            return 1
+        fi
+        pushd "$basedir" 2>&1 > /dev/null
+        if [[ $? != 0 ]]; then
+            echo "pushd failure..."
+            return 1
+        fi
+        abs_path=`pwd`
+        popd 2>&1 > /dev/null
+        PATH=$abs_path/bin:$PATH
+        export LD_LIBRARY_PATH=$abs_path/lib:$LD_LIBRARY_PATH
+    else
+        echo "usage: loadapp /path/to/app"
+        return 1
+    fi
+}
