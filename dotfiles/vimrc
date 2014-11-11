@@ -29,9 +29,9 @@ Plugin 'xolox/vim-session'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'Blackrush/vim-gocode'
 "Plugin 'wting/rust.vim'
-"Plugin 'Shougo/vimproc.vim'
-"Plugin 'eagletmt/ghcmod-vim'
-"Plugin 'eagletmt/neco-ghc'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

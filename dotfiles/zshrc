@@ -35,6 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 set -o vi
 bindkey '^R' history-incremental-search-backward
+bindkey '^?' backward-delete-char
 
 ################################################################################
 # Aliases
