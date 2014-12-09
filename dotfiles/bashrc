@@ -114,4 +114,4 @@ source ~/.sh-common-fun
 # NOTES
 ################################################################################
 # sync
-# rsync -ravz --delete src dst
+# rsync -ravzp --delete src dst
