@@ -71,6 +71,7 @@ alias llnl-oslic='ssh samuel@oslic.llnl.gov'
 # in /etc/hosts
 alias ubuntu-13='ssh -Y samuel@ubuntu-13'
 alias ubuntu-14='ssh -Y samuel@ubuntu-14'
+alias fedsrus='ssh -Y samuel@fedsrus'
 
 ########################################
 # ornl
