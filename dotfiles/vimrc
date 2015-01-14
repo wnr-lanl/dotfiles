@@ -32,6 +32,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
+Plugin 'jnurmine/Zenburn'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,10 +69,12 @@ set t_Co=256
 """ solarized
 "colorscheme solarized
 set background=dark
-let g:solarized_termcolors = 256
+"let g:solarized_termcolors=256
 
 """ sunburst
-colorscheme sunburst
+"colorscheme sunburst
+""" solarized
+colorscheme solarized
 
 set showcmd
 syntax on
