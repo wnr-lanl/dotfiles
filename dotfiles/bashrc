@@ -1,5 +1,6 @@
 # if not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# disable this for now, because of the gladius work...
+#[ -z "$PS1" ] && return
 ################################################################################
 # shell stuff
 ################################################################################

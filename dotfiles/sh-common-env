@@ -25,5 +25,8 @@ $HOME/local/ctags/bin:\
 $HOME/local/valgrind/bin:\
 $HOME/local/gnuplot/bin:\
 $HOME/.cabal/bin:\
+$HOME/local/gladius/bin:\
+$HOME/local/lmon/bin:\
+$HOME/local/mrnet/bin:\
 /usr/local/bin:\
 $PATH
