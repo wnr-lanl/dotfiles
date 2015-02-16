@@ -33,7 +33,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'jnurmine/Zenburn'
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 Plugin 'twerth/ir_black'
 
 call vundle#end()            " required
@@ -134,7 +134,7 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 hi SpellCap cterm=underline
 
-hi Search ctermfg=red cterm=underline
+"hi Search ctermfg=red cterm=underline
 
 " stop terrible default indentation of '#'s in python
 autocmd BufRead *.py inoremap # X<c-h>#
