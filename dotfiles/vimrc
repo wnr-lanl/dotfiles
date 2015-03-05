@@ -35,6 +35,7 @@ Plugin 'eagletmt/neco-ghc'
 Plugin 'jnurmine/Zenburn'
 "Plugin 'jiangmiao/auto-pairs'
 Plugin 'twerth/ir_black'
+Plugin 'Chiel92/vim-autoformat'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -167,6 +168,7 @@ autocmd BufRead *.py inoremap # X<c-h>#
 " :%!xxd to switch into hex mode.
 " :%!xxd -r to exit from hex mode.
 " :set spell - z= for suggestions
+" :Autoformat (uses astyle -- vim-autoformat)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope stuff
