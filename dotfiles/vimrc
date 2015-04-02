@@ -36,6 +36,9 @@ Plugin 'jnurmine/Zenburn'
 "Plugin 'jiangmiao/auto-pairs'
 Plugin 'twerth/ir_black'
 Plugin 'Chiel92/vim-autoformat'
+" Then cd ~/.vim/bundle/color_coded && ./configure && make
+" Also requires that VIM be built with Lua support.
+Plugin 'jeaye/color_coded'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
