@@ -11,7 +11,10 @@ shlvl() {
 }
 
 #PS1='\[\e[1;31m\]\$\[\e[0m\] '
-PS1="\n[\$(shlvl)] \w \u@\h \@\n\[\e[1;31m\]:>>\[\e[0m\] "
+# Hack to fix dumb TERM in MacVIM
+if [[ "$TERM" != "dumb" ]]; then
+    PS1="\n[\$(shlvl)] \w \u@\h \@\n\[\e[1;31m\]:>>\[\e[0m\] "
+fi
 
 # shell options
 shopt -s histverify
