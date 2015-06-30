@@ -119,3 +119,7 @@ source ~/.sh-common-fun
 ################################################################################
 # sync
 # rsync -ravz --delete src dst
+#
+# Ubuntu keyring passwordless ssh in term session.
+# ssh-agent bash
+# ssh-add /home/samuel/.ssh/id_rsa
