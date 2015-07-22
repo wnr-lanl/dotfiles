@@ -40,6 +40,8 @@ Plugin 'Chiel92/vim-autoformat'
 " Also requires that VIM be built with Lua support.
 "Plugin 'jeaye/color_coded'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+" To Use: :TagbarToggle
+Plugin 'majutsushi/tagbar.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
