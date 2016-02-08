@@ -397,7 +397,7 @@
       <key>profiles/Default/font</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/font</schema_key>
       <value>
-        <string>Anonymous Pro 12</string>
+        <string>Anonymous Pro 17</string>
       </value>
     </entry>
     <entry>
@@ -530,7 +530,7 @@
       <key>profiles/Default/visible_name</key>
       <schema_key>/schemas/apps/gnome-terminal/profiles/Default/visible_name</schema_key>
       <value>
-        <string>Default</string>
+        <string>sam-gnome-term</string>
       </value>
     </entry>
     <entry>
