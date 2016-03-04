@@ -42,7 +42,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 " To Use: :TagbarToggle
 Plugin 'majutsushi/tagbar.git'
-Plugin 'myusuf3/numbers.vim.git'
+"Plugin 'myusuf3/numbers.vim.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -112,6 +112,8 @@ set ls=2
 set hlsearch
 set textwidth=80
 set softtabstop=4
+" Turn on search wrap
+set wrapscan
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " haskell things
@@ -150,10 +152,10 @@ autocmd BufRead *.py inoremap # X<c-h>#
 " TagBar Things
 let g:tagbar_left=1
 
-autocmd Filetype c,cpp,python call SetupCFamilyOptions()
-function SetupCFamilyOptions()
-    :TagbarOpen
-endfunction
+"autocmd Filetype c,cpp,python call SetupCFamilyOptions()
+"function SetupCFamilyOptions()
+"    :TagbarOpen
+"endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " omnicompletion stuff
