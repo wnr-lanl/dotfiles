@@ -82,9 +82,9 @@ set t_Co=256
 
 
 """ solarized
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=256
 
 """ sunburst
 "colorscheme sunburst
