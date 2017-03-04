@@ -125,6 +125,12 @@ set t_vb=
 setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tex things
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Default to tex flavor by default
+autocmd BufRead,BufNewFile *.tex set filetype=tex
+
 """ vim-session
 " :SaveSession <name>
 " :OpenSession
@@ -138,9 +144,6 @@ set wildmode=list:longest
 " this is nice, but it confuses ctags :-(
 "autocmd BufEnter * lcd %:p:h
 "
-"execute pathogen#infect()
-" testing
-" filetype plugin on
 
 " underline bad spelling
 hi clear SpellBad
