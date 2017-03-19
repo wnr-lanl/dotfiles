@@ -80,7 +80,6 @@ set t_Co=256
 """ ir_black
 "colorscheme ir_black
 
-
 """ solarized
 "set background=dark
 "colorscheme solarized
@@ -100,21 +99,23 @@ syntax on
 " fix backspace in insert mode
 set backspace=indent,eol,start
 "set number
+" tab settings
+set expandtab
 set ruler
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
-set expandtab
+" indentation
 set autoindent
 set smartindent
-set incsearch
-set showmatch
+" search
+set incsearch " search as characters are entered
+set showmatch " highlight matching
+set hlsearch  " highlight matches
+set wrapscan  " turn on search wrap
 set ls=2
-set hlsearch
 set textwidth=80
-set softtabstop=4
-" Turn on search wrap
-set wrapscan
-" No visual bell
+" no visual bell
 set visualbell
 set t_vb=
 
