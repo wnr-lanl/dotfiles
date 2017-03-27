@@ -43,6 +43,9 @@ Plugin 'Chiel92/vim-autoformat'
 " To Use: :TagbarToggle
 Plugin 'majutsushi/tagbar.git'
 "Plugin 'myusuf3/numbers.vim.git'
+" Writing plugins
+" Requires languagetool
+Plugin 'rhysd/vim-grammarous'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -94,6 +97,20 @@ set t_Co=256
 """ zenburn
 "colorscheme zenburn
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" grammarous
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use system languagetool
+let g:grammarous#languagetool_cmd = 'languagetool'
+
+let g:grammarous#disabled_rules = {
+    \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES'],
+    \ 'help' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
+    \ }
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" general
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showcmd
 syntax on
 " fix backspace in insert mode
