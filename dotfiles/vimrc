@@ -95,7 +95,7 @@ set t_Co=256
 "colorscheme emacs
 
 """ zenburn
-"colorscheme zenburn
+colorscheme zenburn
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " grammarous

@@ -16,6 +16,10 @@ else
     alias ls='ls --color=auto'
 fi
 
+if [[ `uname -s` == "Linux" ]]; then
+    alias open='xdg-open'
+fi
+
 alias vi='vim'
 alias ll='ls -ahlF'
 alias la='ls -A'
