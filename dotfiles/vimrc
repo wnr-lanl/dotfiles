@@ -36,6 +36,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'jnurmine/Zenburn'
 "Plugin 'jiangmiao/auto-pairs'
 Plugin 'twerth/ir_black'
+Plugin 'morhetz/gruvbox'
 Plugin 'Chiel92/vim-autoformat'
 " Then cd ~/.vim/bundle/color_coded && ./configure && make
 " Also requires that VIM be built with Lua support.
@@ -85,18 +86,24 @@ set t_Co=256
 "colorscheme ir_black
 
 """ solarized
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
-let g:solarized_termcolors=256
+
+colorscheme ir_dark
 
 """ sunburst
 "colorscheme sunburst
-""" solarized
-"colorscheme solarized
+
 "colorscheme emacs
 
 """ zenburn
 "colorscheme zenburn
+
+""" gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+"set background=dark
+"colorscheme gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " grammarous
@@ -164,12 +171,12 @@ set wildmode=list:longest
 "autocmd BufEnter * lcd %:p:h
 "
 
-" underline bad spelling
+" underline and highlight bad spelling
 hi clear SpellBad
-hi SpellBad cterm=underline
-hi SpellCap cterm=underline
+hi SpellBad ctermfg=red cterm=underline
+hi SpellCap ctermfg=red cterm=underline
 
-"hi Search ctermfg=red cterm=underline
+hi Search ctermfg=red cterm=underline
 
 " stop terrible default indentation of '#'s in python
 autocmd BufRead *.py inoremap # X<c-h>#
