@@ -27,11 +27,12 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'kien/ctrlp.vim'
+Plugin 'sheerun/vim-polyglot'
 "Plugin 'Blackrush/vim-gocode'
 "Plugin 'wting/rust.vim'
 Plugin 'Shougo/vimproc.vim'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
+"Plugin 'eagletmt/ghcmod-vim'
+"Plugin 'eagletmt/neco-ghc'
 Plugin 'jnurmine/Zenburn'
 "Plugin 'jiangmiao/auto-pairs'
 Plugin 'twerth/ir_black'
@@ -84,9 +85,9 @@ set t_Co=256
 "colorscheme ir_black
 
 """ solarized
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 """ sunburst
 "colorscheme sunburst
