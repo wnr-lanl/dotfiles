@@ -37,12 +37,12 @@ function sanity()
         echo "sanity: bad parameter -- cannot continue."
         return 1
     fi
-    if [[ -z "$PS1" ]]; then
-        echo "please source $APP_NAME, don't run it."
-        echo "EXAMPLE:"
-        echo "  source ./$APP_NAME"
-        return 1
-    fi
+    #if [[ -z "$PS1" ]]; then
+    #    echo "please source $APP_NAME, don't run it."
+    #    echo "EXAMPLE:"
+    #    echo "  source ./$APP_NAME"
+    #    return 1
+    #fi
     if [[ ! -e "$dist_dir/.magic-cookie" ]]; then
         echo "sanity: invalid distribution path detected -- cannot continue."
         return 1
@@ -188,4 +188,3 @@ function main()
 }
 
 main
-return $?

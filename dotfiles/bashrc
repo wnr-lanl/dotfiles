@@ -2,105 +2,9 @@
 # disable this for now, because of the gladius work...
 #[ -z "$PS1" ] && return
 ################################################################################
-# shell stuff
-################################################################################
-
-# -1 because of tmux
-shlvl() {
-    echo `expr $SHLVL - 1` | awk '{print $1}'
-}
-
-#PS1='\[\e[1;31m\]\$\[\e[0m\] '
-# Hack to fix dumb TERM in MacVIM
-if [[ "$TERM" != "dumb" ]]; then
-    PS1="\n[\$(shlvl)] \w \u@\h \@\n\[\e[0;31m\]:::\[\e[0m\] "
-fi
-
-# shell options
-shopt -s histverify
-# vi bindings
-set -o vi
-# don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
-# append to the history file, don't overwrite it
-shopt -s histappend
-# fix broken expand on some versions of bash
-shopt -s direxpand
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=100000
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 ################################################################################
-# dotkit
-################################################################################
-# if we have a local installation of dotkit, then use it
-if [[ -d $HOME/local/dotkit ]]; then
-    eval `$HOME/local/dotkit/init`
-    use -q dotkit 2>&1 > /dev/null
-fi
-
-################################################################################
-# lanl stuff
-################################################################################
-lanl-proxify() {
-    export all_proxy=http://proxyout.lanl.gov:8080
-    export ALL_PROXY=http://proxyout.lanl.gov:8080
-    export http_proxy=http://proxyout.lanl.gov:8080
-    export https_proxy=https://proxyout.lanl.gov:8080
-    export ftp_proxy=http://proxyout.lanl.gov:8080
-    export no_proxy=lanl.gov
-    export NO_PROXY=lanl.gov
-    export HTTP_PROXY=http://proxyout.lanl.gov:8080
-    export HTTPS_PROXY=https://proxyout.lanl.gov:8080
-    export FTP_PROXY=http://proxyout.lanl.gov:8080
-}
-
-lanl-unproxify() {
-    unset all_proxy
-    unset ALL_PROXY
-    unset http_proxy
-    unset https_proxy
-    unset ftp_proxy
-    unset no_proxy
-    unset NO_PROXY
-    unset HTTP_PROXY
-    unset HTTPS_PROXY
-    unset FTP_PROXY
-}
-
-################################################################################
-# convenience functions
-################################################################################
-# sets PATH and LD_LIBRARY_PATH for a specified dir
-loadapp()
-{
-    if [[ $# == 1 ]]; then
-        basedir="$1"
-        if [[ ! -d "$basedir" || ! -d "$basedir/bin" || ! -d "$basedir/lib" ]];
-        then
-            echo "cannot use: $basedir"
-            return 1
-        fi
-        pushd "$basedir" 2>&1 > /dev/null
-        if [[ $? != 0 ]]; then
-            echo "pushd failure..."
-            return 1
-        fi
-        abs_path=`pwd`
-        popd 2>&1 > /dev/null
-        PATH=$abs_path/bin:$PATH
-        export LD_LIBRARY_PATH=$abs_path/lib:$LD_LIBRARY_PATH
-    else
-        echo "usage: loadapp /path/to/app"
-        return 1
-    fi
-}
-
-################################################################################
-# aliases
+# Aliases
 ################################################################################
 source ~/.sh-common-aliases
 
@@ -108,6 +12,11 @@ source ~/.sh-common-aliases
 # Environment
 ################################################################################
 source ~/.sh-common-env
+
+################################################################################
+# Shell options
+################################################################################
+source ~/.sh-common-shopt
 
 ################################################################################
 # Functions
