@@ -100,7 +100,7 @@ let g:ctrlp_working_path_mode = 'ra'
 "colorscheme emacs
 
 """ zenburn
-colorscheme zenburn
+"colorscheme zenburn
 
 """ gruvbox
 "let g:gruvbox_contrast_dark = 'hard'
@@ -125,8 +125,8 @@ if (empty($TMUX))
     endif
 endif
 
-set background=dark " for the dark version
 colorscheme one
+set background=dark " for the dark version
 
 let g:airline_theme='one'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
