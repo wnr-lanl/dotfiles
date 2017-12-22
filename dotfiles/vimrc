@@ -62,6 +62,9 @@ filetype plugin indent on    " required
 " general
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showcmd
+" Highlight current line
+set cursorlinegg
+" set cursorcolumn
 syntax on
 " fix backspace in insert mode
 set backspace=indent,eol,start
