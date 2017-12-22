@@ -63,7 +63,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showcmd
 " Highlight current line
-set cursorlinegg
+set cursorline
 " set cursorcolumn
 syntax on
 " fix backspace in insert mode
