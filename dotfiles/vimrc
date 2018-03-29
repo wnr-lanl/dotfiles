@@ -228,7 +228,8 @@ let g:tagbar_left=1
 " :%!xxd -r to exit from hex mode.
 " :set spell - z= for suggestions
 " :Autoformat (uses astyle -- vim-autoformat)
-" ciDELIM to update text between DELIM (e.g., (), "")
+" ciDELIM to update text between DELIM pair (e.g., (), [])
+" cit update text between tags (e.g., <div>)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope stuff
