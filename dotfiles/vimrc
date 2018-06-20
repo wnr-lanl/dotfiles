@@ -181,6 +181,8 @@ set wildmode=list:longest
 "autocmd BufEnter * lcd %:p:h
 "
 
+set spelllang=en
+
 " underline and highlight bad spelling
 hi clear SpellBad
 hi SpellBad ctermfg=red cterm=underline
