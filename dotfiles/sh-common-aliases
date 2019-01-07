@@ -40,46 +40,46 @@ alias myctags=\
 ########################################
 # lanl
 ########################################
-alias wtrw='ssh -Y samuel@wtrw.lanl.gov'
-alias wf-fey='ssh -Y samuel@wf-fey'
-alias tt-fey='ssh -Y samuel@tt-fey'
-alias sn-fey='ssh -Y samuel@sn-fey'
-alias pi-fey='ssh -Y samuel@pi-fey.lanl.gov'
-alias ml-fey='ssh -Y samuel@ml-fey.lanl.gov'
-alias mu-fey='ssh -Y samuel@mu-fey.lanl.gov'
-alias mu-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh mu-fe1'
-alias ga-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh ga-fe1'
-alias ce-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh ce-fe1'
-alias cj-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh cj-fe1'
-alias mp-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh mp-fe1'
-alias ce-fe3='ssh -Y samuel@wtrw.lanl.gov -t ssh ce-fe3'
-alias ct-fe1='ssh -Y samuel@ct-fe1'
-alias sm-fe1='ssh -Y samuel@sm-cm -t ssh sm-fe1'
-alias cuda='ssh -Y samuel@cuda.lanl.gov'
-alias cub-fe="ssh -Y samuel@ccstargate -t ssh -Y samuel@cub-fe.ccstar"
-alias darwin='ssh -Y samuel@darwin-fe.lanl.gov'
-alias ihpc='ssh -Y samuel@ihpc-gate1.lanl.gov'
-alias cp-fe='ssh -Y samuel@wtrw.lanl.gov -t ssh cp-fe'
+alias ssh-lanl-wtrw='ssh -Y samuel@wtrw.lanl.gov'
+alias ssh-lanl-wf-fey='ssh -Y samuel@wf-fey'
+alias ssh-lanl-tt-fey='ssh -Y samuel@tt-fey'
+alias ssh-lanl-sn-fey='ssh -Y samuel@sn-fey'
+alias ssh-lanl-pi-fey='ssh -Y samuel@pi-fey.lanl.gov'
+alias ssh-lanl-ml-fey='ssh -Y samuel@ml-fey.lanl.gov'
+alias ssh-lanl-mu-fey='ssh -Y samuel@mu-fey.lanl.gov'
+alias ssh-lanl-mu-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh mu-fe1'
+alias ssh-lanl-ga-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh ga-fe1'
+alias ssh-lanl-ce-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh ce-fe1'
+alias ssh-lanl-cj-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh cj-fe1'
+alias ssh-lanl-mp-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh mp-fe1'
+alias ssh-lanl-ce-fe3='ssh -Y samuel@wtrw.lanl.gov -t ssh ce-fe3'
+alias ssh-lanl-ct-fe1='ssh -Y samuel@ct-fe1'
+alias ssh-lanl-sm-fe1='ssh -Y samuel@sm-cm -t ssh sm-fe1'
+alias ssh-lanl-cuda='ssh -Y samuel@cuda.lanl.gov'
+alias ssh-lanl-cub-fe="ssh -Y samuel@ccstargate -t ssh -Y samuel@cub-fe.ccstar"
+alias ssh-lanl-darwin='ssh -Y samuel@darwin-fe.lanl.gov'
+alias ssh-lanl-ihpc='ssh -Y samuel@ihpc-gate1.lanl.gov'
+alias ssh-lanl-cp-fe='ssh -Y samuel@wtrw.lanl.gov -t ssh cp-fe'
 
 ########################################
 # llnl
 ########################################
-alias llnl-atlas='ssh -p 922 samuel@atlas.llnl.gov'
-alias llnl-hera='ssh -p 922 samuel@hera.llnl.gov'
-alias llnl-zeus='ssh -p 922 samuel@zeus.llnl.gov'
-alias llnl-hype='ssh -p 922 samuel@hype.llnl.gov'
-alias llnl-oslic='ssh samuel@oslic.llnl.gov'
+alias ssh-llnl-atlas='ssh -p 922 samuel@atlas.llnl.gov'
+alias ssh-llnl-hera='ssh -p 922 samuel@hera.llnl.gov'
+alias ssh-llnl-zeus='ssh -p 922 samuel@zeus.llnl.gov'
+alias ssh-llnl-hype='ssh -p 922 samuel@hype.llnl.gov'
+alias ssh-llnl-oslic='ssh samuel@oslic.llnl.gov'
 
 ########################################
 # vm
 ########################################
 # in /etc/hosts
-alias ubuntu-13='ssh -Y samuel@ubuntu-13'
-alias ubuntu-14='ssh -Y samuel@ubuntu-14'
-alias fedsrus='ssh -Y samuel@fedsrus'
+alias ssh-vm-ubuntu-13='ssh -Y samuel@ubuntu-13'
+alias ssh-vm-ubuntu-14='ssh -Y samuel@ubuntu-14'
+alias ssh-vm-fedsrus='ssh -Y samuel@fedsrus'
 
 ########################################
 # ornl
 ########################################
 # to get to jaguarpf and chester (xe-6)
-alias ornl-home='ssh samuel@home.ccs.ornl.gov'
+alias ssh-ornl-home='ssh samuel@home.ccs.ornl.gov'
