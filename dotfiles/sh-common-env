@@ -21,6 +21,35 @@ export EDITOR=vim
 umask 027
 
 ################################################################################
+# Cluster environment setup
+################################################################################
+function on_lanl_cluster_fe()
+{
+    hostname | egrep -o '^[a-z]{2}-fe.*$' > /dev/null
+    return 0
+    return $?
+}
+
+function setup_cluster_env()
+{
+    local plat_name=$(hostname | egrep -o '^[a-z]{2}')
+    local hpct_path=/usr/projects/hpctools/samuel
+
+    export PLAT_NAME=$plat_name
+    # Set my plat "home" in hpctools space
+    export PLATHOME="$hpct_path/plats/$PLAT_NAME"
+    # Add useful alias to easily cd into $PLATHOME
+    alias cdplat="cd $PLATHOME"
+
+    # Source platform-specific rc if present
+    local platrc="$HOME/.bashrc-$plat_name"
+    [[ -f $platrc ]] && source $platrc
+}
+
+# Setup cluster-specific environment if on a LANL cluster front-end.
+on_lanl_cluster_fe && setup_cluster_env
+
+################################################################################
 # dotkit
 ################################################################################
 # if we have a local installation of dotkit, then use it
@@ -33,14 +62,5 @@ fi
 # PATH
 ################################################################################
 export PATH=\
-$HOME/local/autotools/bin:\
-$HOME/local/cscope/bin:\
-$HOME/local/ctags/bin:\
-$HOME/local/valgrind/bin:\
-$HOME/local/gnuplot/bin:\
-$HOME/.cabal/bin:\
-$HOME/local/gladius/bin:\
-$HOME/local/lmon/bin:\
-$HOME/local/mrnet/bin:\
 /usr/local/bin:\
 $PATH
