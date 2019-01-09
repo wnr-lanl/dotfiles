@@ -175,15 +175,16 @@ function main()
                 return 1
             fi
         done
+
+        runme_setup_files=`build_runme_setup_list "$dist_path"`
+        for runme_setup_file in `echo "$runme_setup_files"`; do
+             /bin/bash "$dist_path/runme-setup/$runme_setup_file"
+             if [[ 0 != $? ]]; then
+                 echo "runme_setup_files failure!"
+                 return 1
+             fi
+        done
     fi
-    runme_setup_files=`build_runme_setup_list "$dist_path"`
-    for runme_setup_file in `echo "$runme_setup_files"`; do
-         /bin/bash "$dist_path/runme-setup/$runme_setup_file"
-         if [[ 0 != $? ]]; then
-             echo "runme_setup_files failure!"
-             return 1
-         fi
-    done
     return 0
 }
 
