@@ -8,11 +8,22 @@
 set nocompatible
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Uncomment for non-standard installation paths.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let $VIMHOME = '/tmp/samuel/vim'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " setup vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+if (empty($VIMHOME))
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+else " For non-standard installations.
+    set rtp+=$VIMHOME/bundle/Vundle.vim
+    call vundle#begin('$VIMHOME/bundle')
+endif
 
 " let vundle manage vundle -- required!
 Plugin 'gmarik/Vundle.vim'
