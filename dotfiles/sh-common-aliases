@@ -41,6 +41,7 @@ alias myctags=\
 # lanl
 ########################################
 alias ssh-lanl-wtrw='ssh -Y samuel@wtrw.lanl.gov'
+alias ssh-lanl-onyx='ssh -Y samuel@onyx-gate1.lanl.gov'
 alias ssh-lanl-wf-fey='ssh -Y samuel@wf-fey'
 alias ssh-lanl-tt-fey='ssh -Y samuel@tt-fey'
 alias ssh-lanl-sn-fey='ssh -Y samuel@sn-fey'
