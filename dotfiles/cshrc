@@ -1,0 +1,4 @@
+# Enable vim mode.
+bindkey -v
+# Enable ^r reverse search.
+bindkey "^R" i-search-back
