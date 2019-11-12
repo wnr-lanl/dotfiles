@@ -1,7 +1,7 @@
 [user]
-	name = Samuel K. Gutierrez
-	email = samuel@lanl.gov
-	signingkey = Samuel K. Gutierrez (LANL)
+	name = William N. (Bill) Rust
+	email = wnr@lanl.gov
+	signingkey = William N. (Bill) Rust (LANL)
 
 [color]
 	branch = auto

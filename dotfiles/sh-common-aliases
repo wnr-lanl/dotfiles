@@ -4,9 +4,9 @@
 # repo checkout
 alias cosm='git clone git@github.com:hpc/supermagic.git'
 alias commu='git clone git@github.com:hpc/mpimemu.git'
-alias compith='cvs -z3 -d:ext:samuel@sf4.lanl.gov:/cvsroot/mpith checkout mpith'
+#alias compith='cvs -z3 -d:ext:samuel@sf4.lanl.gov:/cvsroot/mpith checkout mpith'
 alias coplfs='svn co https://plfs.svn.sourceforge.net/svnroot/plfs/trunk '
-alias coloba='cvs -d:ext:samuel@sf4.lanl.gov:/cvsroot/loba co loba'
+#alias coloba='cvs -d:ext:samuel@sf4.lanl.gov:/cvsroot/loba co loba'
 alias coompi='svn co https://svn.open-mpi.org/svn/ompi/trunk '
 
 # TODO fix all the os specific code
@@ -40,47 +40,47 @@ alias myctags=\
 ########################################
 # lanl
 ########################################
-alias ssh-lanl-wtrw='ssh -Y samuel@wtrw.lanl.gov'
-alias ssh-lanl-onyx='ssh -Y samuel@onyx-gate1.lanl.gov'
-alias ssh-lanl-wf-fey='ssh -Y samuel@wf-fey'
-alias ssh-lanl-tt-fey='ssh -Y samuel@tt-fey'
-alias ssh-lanl-sn-fey='ssh -Y samuel@sn-fey'
-alias ssh-lanl-pi-fey='ssh -Y samuel@pi-fey.lanl.gov'
-alias ssh-lanl-ml-fey='ssh -Y samuel@ml-fey.lanl.gov'
-alias ssh-lanl-mu-fey='ssh -Y samuel@mu-fey.lanl.gov'
-alias ssh-lanl-mu-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh mu-fe1'
-alias ssh-lanl-ga-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh ga-fe1'
-alias ssh-lanl-ce-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh ce-fe1'
-alias ssh-lanl-cj-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh cj-fe1'
-alias ssh-lanl-mp-fe1='ssh -Y samuel@wtrw.lanl.gov -t ssh mp-fe1'
-alias ssh-lanl-ce-fe3='ssh -Y samuel@wtrw.lanl.gov -t ssh ce-fe3'
-alias ssh-lanl-ct-fe1='ssh -Y samuel@ct-fe1'
-alias ssh-lanl-sm-fe1='ssh -Y samuel@sm-cm -t ssh sm-fe1'
-alias ssh-lanl-cuda='ssh -Y samuel@cuda.lanl.gov'
-alias ssh-lanl-cub-fe="ssh -Y samuel@ccstargate -t ssh -Y samuel@cub-fe.ccstar"
-alias ssh-lanl-darwin='ssh -Y samuel@darwin-fe.lanl.gov'
-alias ssh-lanl-ihpc='ssh -Y samuel@ihpc-gate1.lanl.gov'
-alias ssh-lanl-cp-fe='ssh -Y samuel@wtrw.lanl.gov -t ssh cp-fe'
+alias ssh-lanl-wtrw='ssh -Y wnr@wtrw.lanl.gov'
+alias ssh-lanl-onyx='ssh -Y wnr@onyx-gate1.lanl.gov'
+alias ssh-lanl-wf-fey='ssh -Y wnr@wf-fey'
+alias ssh-lanl-tt-fey='ssh -Y wnr@tt-fey'
+alias ssh-lanl-sn-fey='ssh -Y wnr@sn-fey'
+alias ssh-lanl-pi-fey='ssh -Y wnr@pi-fey.lanl.gov'
+alias ssh-lanl-ml-fey='ssh -Y wnr@ml-fey.lanl.gov'
+alias ssh-lanl-mu-fey='ssh -Y wnr@mu-fey.lanl.gov'
+alias ssh-lanl-mu-fe1='ssh -Y wnr@wtrw.lanl.gov -t ssh mu-fe1'
+alias ssh-lanl-ga-fe1='ssh -Y wnr@wtrw.lanl.gov -t ssh ga-fe1'
+alias ssh-lanl-ce-fe1='ssh -Y wnr@wtrw.lanl.gov -t ssh ce-fe1'
+alias ssh-lanl-cj-fe1='ssh -Y wnr@wtrw.lanl.gov -t ssh cj-fe1'
+alias ssh-lanl-mp-fe1='ssh -Y wnr@wtrw.lanl.gov -t ssh mp-fe1'
+alias ssh-lanl-ce-fe3='ssh -Y wnr@wtrw.lanl.gov -t ssh ce-fe3'
+alias ssh-lanl-ct-fe1='ssh -Y wnr@ct-fe1'
+alias ssh-lanl-sm-fe1='ssh -Y wnr@sm-cm -t ssh sm-fe1'
+alias ssh-lanl-cuda='ssh -Y wnr@cuda.lanl.gov'
+alias ssh-lanl-cub-fe="ssh -Y wnr@ccstargate -t ssh -Y wnr@cub-fe.ccstar"
+alias ssh-lanl-darwin='ssh -Y wnr@darwin-fe.lanl.gov'
+alias ssh-lanl-ihpc='ssh -Y wnr@ihpc-gate1.lanl.gov'
+alias ssh-lanl-cp-fe='ssh -Y wnr@wtrw.lanl.gov -t ssh cp-fe'
 
 ########################################
 # llnl
 ########################################
-alias ssh-llnl-atlas='ssh -p 922 samuel@atlas.llnl.gov'
-alias ssh-llnl-hera='ssh -p 922 samuel@hera.llnl.gov'
-alias ssh-llnl-zeus='ssh -p 922 samuel@zeus.llnl.gov'
-alias ssh-llnl-hype='ssh -p 922 samuel@hype.llnl.gov'
-alias ssh-llnl-oslic='ssh samuel@oslic.llnl.gov'
+alias ssh-llnl-atlas='ssh -p 922 wnr@atlas.llnl.gov'
+alias ssh-llnl-hera='ssh -p 922 wnr@hera.llnl.gov'
+alias ssh-llnl-zeus='ssh -p 922 wnr@zeus.llnl.gov'
+alias ssh-llnl-hype='ssh -p 922 wnr@hype.llnl.gov'
+alias ssh-llnl-oslic='ssh wnr@oslic.llnl.gov'
 
 ########################################
 # vm
 ########################################
 # in /etc/hosts
-alias ssh-vm-ubuntu-13='ssh -Y samuel@ubuntu-13'
-alias ssh-vm-ubuntu-14='ssh -Y samuel@ubuntu-14'
-alias ssh-vm-fedsrus='ssh -Y samuel@fedsrus'
+alias ssh-vm-ubuntu-13='ssh -Y wnr@ubuntu-13'
+alias ssh-vm-ubuntu-14='ssh -Y wnr@ubuntu-14'
+alias ssh-vm-fedsrus='ssh -Y wnr@fedsrus'
 
 ########################################
 # ornl
 ########################################
 # to get to jaguarpf and chester (xe-6)
-alias ssh-ornl-home='ssh samuel@home.ccs.ornl.gov'
+alias ssh-ornl-home='ssh wnr@home.ccs.ornl.gov'

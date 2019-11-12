@@ -31,4 +31,4 @@ source ~/.sh-common-fun
 #
 # Ubuntu keyring passwordless ssh in term session.
 # ssh-agent bash
-# ssh-add /home/samuel/.ssh/id_rsa
+# ssh-add /home/wnr/.ssh/id_rsa
